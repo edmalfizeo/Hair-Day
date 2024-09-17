@@ -1,0 +1,32 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar env local
+.env
+.env.local
+.env.*.local
+
+# Ignorar cache do npm e yarn
+.pnpm-debug.log
+.yarn-integrity
+.yarn/
+
+# Ignorar diretorios de build
+dist/
+build/
+out/
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar IDEs e editores de texto
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
