@@ -8,11 +8,13 @@ export async function scheduleNew({id, name, when}) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                id,
+                id: `${id}`,
                 name,
                 when,
             }),
         })
+
+        console.log(typeof id);
 
         alert('Consulta agendada com sucesso!');
     } catch(error) {

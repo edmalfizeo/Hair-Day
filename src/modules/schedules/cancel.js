@@ -12,6 +12,8 @@ periods.forEach((period) => {
             
             // Captura o id do agendamento.
             const id = item.dataset.id
+            console.log(id)
+            
             
             // Verifica se o id foi capturado.
             if(id) {
