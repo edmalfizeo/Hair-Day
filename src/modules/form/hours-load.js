@@ -10,7 +10,7 @@ export function hoursLoad( { date, dailySchedules } ) {
     hours.innerHTML = '';
 
     // Obtem as horas que estão indisponiveis.
-    const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when, 'DD/MM/YYYY HH:mm').format('HH:mm'));
+    const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when, 'YYYY-MM-DDTHH:mm:ss').format('HH:mm'))
     
     
     const opening = openingHours.map((hour) => {

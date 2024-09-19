@@ -24,7 +24,8 @@ export function schedulesShow({ dailySchedules }) {
             // Adicionar o id do agendamento no item.
             item.setAttribute('data-id', schedule.id);
 
-            time.textContent = dayjs(schedule.when, 'DD/MM/YYYY HH:mm').format('HH:mm');
+            time.textContent = dayjs(schedule.when).format('HH:mm');
+
             name.textContent = schedule.name;
 
             // Cria o icone de cancelar o agendamento.
@@ -37,7 +38,9 @@ export function schedulesShow({ dailySchedules }) {
             item.append(time, name, cancelIcon);
 
             // Obtem somente a hora.
-            const hour = dayjs(schedule.when, 'DD/MM/YYYY HH:mm').hour();
+            const hour = dayjs(schedule.when, 'YYYY-MM-DDTHH:mm:ss').hour();
+
+            console.log("Horário processado:", hour);
 
             // Renderiza o agendamento na sessão (manha, tarde ou noite).
             if (hour <= 12) {

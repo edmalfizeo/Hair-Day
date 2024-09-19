@@ -10,8 +10,10 @@
     "server": "json-server --watch server.json --port 3333"
   },
   "dependencies": {
-    "dayjs": "^1.11.10",
-    "json-server": "^1.0.0-alpha.21"
+    "dayjs": "^1.11.13",
+    "dayjs-plugin-utc": "^0.1.2",
+    "json-server": "^1.0.0-alpha.21",
+    "moment-timezone": "^0.5.45"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",

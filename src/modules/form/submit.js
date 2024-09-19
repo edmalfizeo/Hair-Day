@@ -8,7 +8,7 @@ const clientName = document.getElementById("client");
 const selectedDate = document.getElementById("date")
 
 // Date atual para o input
-const inputToday = dayjs(new Date()).format("YYYY-MM-DD");
+const inputToday = dayjs().format("YYYY-MM-DD");
 
 // Carrega a data atual e a data mínima no input.
 selectedDate.value = inputToday;
@@ -37,8 +37,7 @@ form.onsubmit = async (event) => {
     const [hour] = hourSelected.innerText.split(':');
     
     // Insere a hora na data
-    const when = dayjs(selectedDate.value).add(hour, 'hour')
-    
+    const when = dayjs(selectedDate.value).hour(parseInt(hour, 10)).format('YYYY-MM-DDTHH:mm:ss');
 
     // Gera um ID
     const id = new Date().getTime();
@@ -47,7 +46,7 @@ form.onsubmit = async (event) => {
         {
             id,
             name,
-            when: when.format('DD/MM/YYYY HH:mm')
+            when,
         }
     )
 

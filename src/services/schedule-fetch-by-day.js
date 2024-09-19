@@ -9,7 +9,8 @@ export async function scheduleFetchByDay({ date }) {
 
         // Filtra os agendamentos pela data
         const dailySchedules = data.filter((schedule) => {
-            const scheduleDate = dayjs(schedule.date).format("YYYY-MM-DD");
+            const scheduleDate = dayjs(schedule.when).format("YYYY-MM-DD");
+
             return scheduleDate === date;
         });
 
